@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class SubjectController extends Controller
 {
-    public function index(Request $request, $studentId)
+    public function index2(Request $request, $studentId)
     {
   
         $query = Subject::where('student_id', $studentId);
@@ -54,7 +54,7 @@ class SubjectController extends Controller
         return response()->json($subjects);
     }
 
-    public function store(Request $request, $studentId)
+    public function store2(Request $request, $studentId)
     {
         $request->validate([
             'subject_code' => 'required|string',
@@ -88,14 +88,14 @@ class SubjectController extends Controller
         return response()->json($subject, 201);
     }
 
-    public function show($studentId, $subjectId)
+    public function show2($studentId, $subjectId)
     {
         $subject = Subject::findOrFail($subjectId);
 
         return response()->json($subject);
     }
 
-    public function update(Request $request, $studentId, $subjectId)
+    public function update2(Request $request, $studentId, $subjectId)
     {
         $request->validate([
             'subject_code' => 'string',

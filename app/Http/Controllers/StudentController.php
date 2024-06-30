@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {   
-    public function index(Request $request)
+    public function index1(Request $request)
     {
         $students = Student::all();
         $query = Student::query();
@@ -58,7 +58,7 @@ class StudentController extends Controller
         return response()->json($students);
     }
 
-    public function store(Request $request)
+    public function store1(Request $request)
     {
         $request->validate([
             'firstname' => 'required|string',
@@ -76,14 +76,14 @@ class StudentController extends Controller
         return response()->json($student, 201);
     }
 
-    public function show($id)
+    public function show1($id)
     {
         $student = Student::findOrFail($id);
 
         return response()->json($student);
     }
 
-    public function update(Request $request, $id)
+    public function update1(Request $request, $id)
     {
         $request->validate([
             'firstname' => 'string',

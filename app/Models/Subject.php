@@ -22,9 +22,9 @@ class Subject extends Model
         'date_taken',
     ];
 
-    // Define relationship with Student (will be established later)
-    // public function student()
-    // {
-    //     return $this->belongsTo(Student::class);
-    // }
+
+    public function student()
+    {
+         return $this->belongsTo(Student::class);
+    }
 }
