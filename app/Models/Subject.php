@@ -22,6 +22,10 @@ class Subject extends Model
         'date_taken',
     ];
 
+    protected $casts = [
+        'grades' => 'array',
+    ];
+
 
     public function student()
     {

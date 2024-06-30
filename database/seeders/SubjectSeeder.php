@@ -14,8 +14,8 @@ class SubjectSeeder extends Seeder
     public function run(): void
     {
         Subject::create([
-            'student_id' => 1,
-            'subject_code' => 1,
+            'student_id' => 3,
+            'subject_code' => 3,
             'name' => 'Introduction to Computer Science',
             'description' => 'Fundamentals of computer science',
             'instructor' => 'Dr. Smith',

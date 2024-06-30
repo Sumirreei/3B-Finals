@@ -4,10 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 
-Route::get('/students/{id}/subjects', [StudentController::class, 'index1']);
-Route::post('/students/{id}/subjects', [StudentController::class, 'store1']);
-Route::get('/students/{id}/subjects/{subject_id}', [StudentController::class, 'show1']);
-Route::patch('/students/{id}/subjects/{subject_id}', [StudentController::class, 'update1']);
+Route::patch('/students/{id}', [StudentController::class, 'update1']);
+Route::get('/students/{id}', [StudentController::class, 'show1']);
+Route::get('/students', [StudentController::class, 'index1']);
+Route::post('/students', [StudentController::class, 'store1']);
 
 use App\Http\Controllers\SubjectController;
 

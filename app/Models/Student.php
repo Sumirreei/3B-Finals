@@ -18,4 +18,12 @@ class Student extends Model
         'course',
         'section',
     ];
+   
+
+    public function subjects()
+    {
+        return $this->hasMany(Subject::class);
+    }
+
+    
 }
